@@ -61,6 +61,23 @@ If enabled npm install will be run after the git update. Off by default.
 
 This is a collections of modules you want to have installed for your system. It
 will pull them down and run a `npm install` on them for you. 
+## Authetic :
+export HASSIO_TOKEN="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIzNGNlYzIzNzY2OWY0NmE2YmQwMTJmZTc5YTg2NTVjNyIsImlhdCI6MTU4OTA4NzUyNCwiZXhwIjoxOTA0NDQ3NTI0fQ.lv6Fseo190A0FD_s-0MeXG3PvXp3LVuEQFZbaqwFC_U"
+echo $HASSIO_TOKEN
+
+module.exports = {
+  apps : [
+      {
+        name: "MagicMirror",
+        script: "./mm.sh",
+        watch: true,
+        env: {
+          "HASSIO_TOKEN": „XXXXXXXXXXXX“
+        }
+      }
+  ]
+}
+https://community.home-assistant.io/t/magic-mirror/8443/47
 
 ## Example
 
